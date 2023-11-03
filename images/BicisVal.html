@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/venta.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="" activitat="" html-css"="">
+    <meta name="" author"="" content="Omar Martin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BicisVal</title>
+    <link rel="stylesheet" type="text/css" href="./BicisVal_files/estilo.css" media="screen">
+</head>
+<body><div>
+    <header>
+        <div id="banner">
+            <img id="logo" src="./BicisVal_files/logo.png">
+        </div>
+        <div id="contenedor-botones-banner">
+            <section id="cont-idioma" class="idioma">
+                <div id="idiomas">
+                    <a href="http://127.0.0.1:5500/index.html" target="_self"><button class="boton-idioma" id="botonVal"></button></a>
+                    <a href="http://127.0.0.1:5500/index.html" target="_self"><button class="boton-idioma" id="botonCas"></button></a>
+                </div>
+            </section>
+            
+        </div>
+    </header>
+    <div id="contenedor">
+        <nav id="menu">
+            <section id="operaciones">
+                <a href="http://127.0.0.1:5500/alquiler.html" target="_self">
+                    <button class="boton-menu">Alquiler</button>
+                </a>
+                <a href="http://127.0.0.1:5500/taller.html" target="_self">
+                    <button class="boton-menu">Taller</button>
+                </a>
+                <a href="http://127.0.0.1:5500/venta.html" target="_self">
+                    <button class="boton-menu">Venta</button>
+                </a>
+            </section>
+        </nav>
+    </div>
+    <section id="texto-info-productos">
+        <p>Productos disponibles</p>
+    </section>
+    <section id="contenedor-productos">
+        <div id="producto1" class="items">
+            <img id="imagen-prod1" class="productos-venta" src="./BicisVal_files/bici1.jpeg">
+            <p class="info-productos">Orbea OIZ</p>
+        </div>
+        <div id="producto1" class="items">
+            <img id="imagen-prod2" class="productos-venta" src="./BicisVal_files/bici2.jpeg">
+            <p class="info-productos">Santa Cruz Blur</p>
+        </div>
+        <div id="producto1" class="items">
+            <img id="imagen-prod3" class="productos-venta" src="./BicisVal_files/bici3.jpeg">
+            <p class="info-productos">Scott Genius</p>
+        </div>
+        <div id="producto1" class="items">
+            <img id="imagen-prod4" class="productos-venta" src="./BicisVal_files/bici4.jpeg">
+            <p class="info-productos">BH Lynx</p>
+        </div>
+        <div id="producto1" class="items">
+            <img id="imagen-prod5" class="productos-venta" src="./BicisVal_files/bici5.jpeg">
+            <p class="info-productos">Trek Top Fuel</p>
+        </div>  
+        <div id="producto1" class="items">
+            <img id="imagen-prod6" class="productos-venta" src="./BicisVal_files/bici6.jpeg">
+            <p class="info-productos">Megamo Track</p>
+        </div> 
+    </section>
+
+    <footer>
+        <section id="texto-footer">
+            <strong>BicisVal</strong>
+            <span>c/Noah, 24 Ontinyent - 46870 96 290 66 77</span>
+            <span><a href="http://127.0.0.1:5500/venta.html">Ubicación</a></span>  
+        </section>
+        <section id="botones-footer">
+            <a href="mailto:bicisval@bicisval.es">
+                <button id="boton-contacto"></button>
+            </a>
+        </section>
+        <section id="rrss">
+            <p></p>
+            <a href="http://www.facebook.es/" target="_self">
+                <button class="boton-rrss" id="boton-facebook"></button>
+            </a>
+            <a href="http://www.twitter.com/" target="_self">
+                <button class="boton-rrss" id="boton-twitter"></button>
+            </a>
+            <a href="http://www.instagram.es/" target="_self">
+                <button class="boton-rrss" id="boton-instagram"></button>
+            </a>
+        </section>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</div></body></html>
