@@ -7,6 +7,7 @@ html {
   height: 100%;
   border: none;
   font-family: 'Bree Regular';
+  box-sizing: border-box;
 }
 
 body {
@@ -17,8 +18,13 @@ body {
   /* font-family: "Helvetica Neue"; */
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
 header {
-  height : 30%;
+  min-height : 140px;
   max-height: 250px;
   width: 100%;
   display: flex;
@@ -84,17 +90,9 @@ header {
   justify-content: center;
 }
 
-#inicio {
-  background-image: url("./images/inicio1.png");
-  width: 55px;
-  height: 55px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: none;
-  border-radius: 50%;
-  justify-content: center;
-
+#boton-inicio .material-icons {
+  font-size: 70px;
+  color:#8e7cc3
 }
 
 .boton-rrss {
@@ -185,6 +183,11 @@ header {
   border: none;
   padding-top : 20px;
   align-items: center;
+  width: 100%;
+}
+
+.imagen-centro {
+  width: 100%;
 }
 
 #banner-centro p {
@@ -193,10 +196,167 @@ header {
   text-align: center;
 }
 
-section>img {
+.items {
   width: 100%;
   border: none;
+  cursor: pointer;
 }
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.contenido-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+}
+
+.contenido-principal .input-title {
+  font-size: 17px;
+}
+
+.campo span {
+  padding-bottom: 5px;
+  color: black;
+}
+
+.campo input {
+  width: 70%;
+  align-items: center;
+  background-color: transparent;
+  border:none;
+  outline: 3px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  color: black
+}
+
+.campo select {
+  width: 70%;
+  align-items: center;
+  background-color: transparent;
+  border:none;
+  outline: 3px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  color: black
+}
+
+.campo .material-icons {
+  font-size: 35px;
+}
+
+.campo input::placeholder{
+  color: black;
+}
+
+.campo input:focus {
+  outline: 3px solid #8e7cc3;
+  color:#8e7cc3;
+  font-size: 15px;
+}
+.campo input:focus::placeholder{
+  color: #8e7cc3;
+  font-size: 15px;
+}
+
+.btn-campo {
+  padding: 5px 10px;
+}
+
+.btn-campo input {
+  width: 40%;
+  margin: 20px 0 0 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border-radius: 40px;
+  
+}
+
+.btn-campo input:hover {
+  background-color: #8e7cc3;
+  color: white;
+  outline: none;
+  border: 2px solid #8e7cc3;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main-form {
+  margin: 20px 0;
+  width: 40%;
+  height:80%;
+  gap: 10px;
+  text-align: center;
+  background-color: transparent;
+
+}
+
+.precios {
+  background-color: rgba(142,124,195,0.3);
+  background-size: auto 100%;
+  border-radius: 30px;
+  font-size: 30px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100%;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.precios p:nth-child(2){
+  text-transform: uppercase;
+}
+
+.precios span:first-child {
+  padding-top: 10px;
+  font-size: 60px;
+}
+
+.precios p::first-letter{
+  text-transform: uppercase;
+}
+.precios p:last-child {
+  padding-bottom: 20px;
+}
+
+.precios .material-icons{
+  margin: 0;
+  padding: 25px 0 0 0;
+  font-size: 40px;
+}
+
+.precios p {
+  margin: 0;
+  padding: 5px 0 0 0;
+  text-align: center;
+}
+
+.precios hr {
+  height: 3px;
+  width: 80%;
+  background-color: black;
+  border:none;
+  margin: 1px 0 10px 0;
+  padding: 0.01rem;
+}
+
+.precios .texto-precios {
+  font-size: 17px;
+}
+
 
 /* footer {
   min-height: 80px;
@@ -211,11 +371,13 @@ section>img {
   display: flex;
   flex-direction: row;
   justify-items: space-between;
-  min-height: 80px;
-  max-height: 150px;
-  height: 20%;
+  align-items: center;
+  min-height: 130px;
+  max-height: 200px;
+  height: 30%;
   width: 100%;
-  background-color: #70b578;
+  background: rgba(4,144,97,0.8477984943977591);
+  /* background: rgba(132,201,178,0.8842130602240896) 19%, ; */
   margin-top: 5%;
 }
 
@@ -230,9 +392,23 @@ section>img {
 #botones-footer {
   width: 20%;
   display: flex;
+  flex-direction:column;
   align-items: center;
   justify-content: start;
   padding-left: 20px;
+  position: relative;
+}
+
+#botones-footer .material-icons {
+  font-size:50px;
+}
+
+#botones-footer a {
+  color:black;
+}
+
+#botones-footer a:hover {
+  color:#8e7cc3;
 }
 
 #boton-contacto {
@@ -244,6 +420,29 @@ section>img {
   background-position: center;
   border: none;
   border-radius: 30%;
+}
+
+#texto-footer .condiciones {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+#texto-footer .condiciones:link,
+#texto-footer .condiciones:visited {
+  text-decoration:dashed;
+}
+
+#texto-footer span{
+  display: flex;
+  flex-direction: column;
+}
+
+#texto-footer span::after {
+  content:"";
+  padding: 2px;
 }
 
 #rrss {
@@ -270,17 +469,64 @@ section>img {
   text-align: center;
   font-family: 'Bree Regular';
   font-size: 17px;
-  background-color: #70b578;
+  background-color: #418a65;
   color: white;
   margin-left: 100px;
   margin-right: 100px;
   align-items: center;
   border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.7s ease-in-out;
+  width: 50%;
 }
 
 .productos-venta {
   width:29rem;
-  object-fit:fill
+  object-fit:fill;
+  transition: all 0.7s ease-in-out;
+}
+
+.descripcion-prod {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.descripcion-prod:hover img {
+  transform: scale(1.1)
+}
+
+.descripcion-prod:hover p {
+  transform: scale(1.1)
+}
+
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-bici {
+  width: 1000px;
+  height: auto;
+}
+
+ul {
+  font-size: 30px;
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  background: url("./images/pinon.png") no-repeat 0px;
+  padding: 20px;
+  padding-left: 60px;
+}
+
+.caracteristica::marker {
+  font-size: 1rem;
 }
 
 #contenedor-productos {
@@ -289,6 +535,12 @@ section>img {
   grid-auto-rows: auto-fill;
   grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
   grid-auto-flow: dense;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  justify-items: center;
+  margin: 0 10px;
+  
 }
 
 #texto-info-productos {
@@ -300,6 +552,46 @@ section>img {
   margin-top: 5rem;
 }
 
+.modelos-alquiler{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.modelos-alquiler > p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: #8e7cc380;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
 
+}
 
+.modelos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.modelos .modelo-imagen {
+  width: auto;
+  height: 230px;
+  border-radius: 10px;
+}
+
+.casilla-modelo {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-around;
+}
+
+/*
+formulario pedir cita para el taller
+cambiar icono inicio */
