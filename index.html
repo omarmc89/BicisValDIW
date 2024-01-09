@@ -2,86 +2,110 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="description" content Activitat HTML-CSS">
-        <meta name author" content="Omar Martin">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BicisVal</title>
-        <link rel="stylesheet" type="text/css" href="./estilo.css"
-            media="screen" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="description" content Activitat HTML-CSS">
+      <meta name author" content="Omar Martin">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>BicisVal</title>
+      <link rel="stylesheet" type="text/css" href="./estilo.css"
+          media="screen" />
+          <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit:ital,wght@0,200;0,300;0,500;0,700;1,300&family=Long+Cang&family=Permanent+Marker&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <header>
-            <div id="banner">
-                <img id="logo" src="./images/logo.png" />
-            </div>
-            <div id="contenedor-botones-banner">
-                <section id="cont-idioma" class="idioma">
-                    <div id="idiomas">
-                        <a href="index.html" target="_self"><button
-                                class="boton-idioma" id="botonVal"></button></a>
-                        <a href="index.html" target="_self"><button
-                                class="boton-idioma" id="botonCas"></button></a>
-                    </div>
-                </section>
-                <section id="boton-inicio">
-                    <a href="index.html" target="_self"><span
-                            class="material-icons">house</span></a>
-                </section>
-            </div>
-        </header>
-        <div id="contenedor">
-            <nav id="menu">
-                <section id="operaciones">
-                    <a href="alquiler.html" target="_self">
-                        <button class="boton-menu">Alquiler</button>
-                    </a>
-                    <a href="taller.html" target="_self">
-                        <button class="boton-menu">Taller</button>
-                    </a>
-                    <a href="venta.html" target="_self">
-                        <button class="boton-menu">Venta</button>
-                    </a>
-                </section>
-            </nav>
-
-            <section id="banner-centro">
-                <img class="imagen-centro" src="./images/track.jpg">
+      <header>
+        <h2 class="logo" >BicisVal</h2>
+        <nav class="navigation">
+          <a href="./alquiler.html">Alquiler</a>
+          <a href="./taller.html">Taller</a>
+          <a href="./venta.html">Venta</a>
+          <div class="language">
+            <a href="#">Esp</a>
+            <a href="#">Val</a>
+          </div>
+        </nav>
+        <!-- <div id="contenedor-botones-banner">
+            <section id="cont-idioma" class="idioma">
+                <div id="idiomas">
+                    <a href="index.html" target="_self"><button
+                            class="boton-idioma" id="botonVal"></button></a>
+                    <a href="index.html" target="_self"><button
+                            class="boton-idioma" id="botonCas"></button></a>
+                </div>
             </section>
-        </div>
-        <footer>
-            <article id="contenedor-footer">
-                <section id="botones-footer">
-                    <p>Contacto (Email):</p>
-                    <a href="mailto:bicisval@bicisval.es">
-                        <span class="material-icons">mail</span>
-                    </a>
-                </section>
-                <section id="texto-footer">
-                    <span><strong>BicisVal</strong></span>
-                    <span>c/Noah, 24 Ontinyent - 46870</span>
-                    <span> Tel.: 96 290 66 77</span>
-                    <span><a href>Ubicación</a></span>
-                    <div class="condiciones">
-                        <a href="#">Política de "Cookies"</a>
-                        <a href="#">Términios y condiciones</a>
-                        <a href="#">Privacidad</a>
-                    </div>
-                </section>
-                <section id="rrss">
-                    <a href="http://www.facebook.es" target="_self">
-                        <button class="boton-rrss" id="boton-facebook"></button>
-                    </a>
-                    <a href="http://www.twitter.com" target="_self">
-                        <button class="boton-rrss" id="boton-twitter"></button>
-                    </a>
-                    <a href="http://www.instagram.es" target="_self">
-                        <button class="boton-rrss" id="boton-instagram"></button>
-                    </a>
-                </section>
-            </article>
-        </footer>
+            <section id="boton-inicio">
+                <a href="index.html" target="_self"><span
+                        class="material-icons">house</span></a>
+            </section>
+        </div> -->
+      </header>
+      <section class="main-background">
+        <img src="./images/main-background2.jpg" alt="BicisVal" id="main-background">
+        <h2 id="banner-text">Encuentra la aventura en cada ruta</h2>
+        <h2 id="banner-text-offer">¡Explora nuestra tienda online y descubre los mejores productos a precios imbatibles!</h2>
+      </section>
+      <section class="main-des">
+        <p>En BicisVal, fusionamos la emoción del MTB con servicio de élite. Descubre bicicletas de alta gama y accesorios especializados en nuestra tienda, y deja que nuestro taller especializado mantenga tu equipo en la cima. Donde la pasión y la precisión se encuentran, ¡bienvenido a tu destino MTB definitivo!
+        </p>
+      </section>
+      <section class="posts">
+        <h2 class="postsTitle">Consejos útiles</h2>
+        <article class="postCard">
+          <a href="#"><h3 class="postTitke">Grasa, cera y aceite para tu MTB: cuándo y cómo usar cada uno
+          </h3></a>
+          <p>No podemos echar cualquier tipo de lubricante por toda la bicicleta. Hay partes que requieren grasa, otras aceite o cera… Te aconsejamos dónde y cómo usar cada una de ellas para engrasar correctamente tu MTB.</p>
+        </article>
+        <article class="postCard">
+          <a href="#"><h3 class="postTitke">Grasa, cera y aceite para tu MTB: cuándo y cómo usar cada uno
+          </h3></a>
+          <p>No podemos echar cualquier tipo de lubricante por toda la bicicleta. Hay partes que requieren grasa, otras aceite o cera… Te aconsejamos dónde y cómo usar cada una de ellas para engrasar correctamente tu MTB.</p>
+        </article>
+        <article class="postCard">
+          <a href="#"><h3 class="postTitke">Grasa, cera y aceite para tu MTB: cuándo y cómo usar cada uno
+          </h3></a>
+          <p>No podemos echar cualquier tipo de lubricante por toda la bicicleta. Hay partes que requieren grasa, otras aceite o cera… Te aconsejamos dónde y cómo usar cada una de ellas para engrasar correctamente tu MTB.</p>
+        </article>
+        <article class="postCard">
+          <a href="#"><h3 class="postTitke">Grasa, cera y aceite para tu MTB: cuándo y cómo usar cada uno
+          </h3></a>
+          <p>No podemos echar cualquier tipo de lubricante por toda la bicicleta. Hay partes que requieren grasa, otras aceite o cera… Te aconsejamos dónde y cómo usar cada una de ellas para engrasar correctamente tu MTB.</p>
+        </article>
+      </section>
+
+      <footer>
+          <article id="contenedor-footer">
+              <section id="botones-footer">
+                  <p>Contacto (Email):</p>
+                  <a href="mailto:bicisval@bicisval.es">
+                      <span class="material-icons">mail</span>
+                  </a>
+              </section>
+              <section id="texto-footer">
+                  <span><strong>BicisVal</strong></span>
+                  <span>c/Noah, 24 Ontinyent - 46870</span>
+                  <span> Tel.: 96 290 66 77</span>
+                  <span><a href="#" style="color:black; text-decoration: underline;">Ubicación</a></span>
+                  <div class="condiciones">
+                      <a href="#">Política de "Cookies"</a>
+                      <a href="#">Términios y condiciones</a>
+                      <a href="#">Privacidad</a>
+                  </div>
+              </section>
+              <section id="rrss">
+                  <a href="http://www.facebook.es" target="_self">
+                      <button class="boton-rrss" id="boton-facebook"></button>
+                  </a>
+                  <a href="http://www.twitter.com" target="_self">
+                      <button class="boton-rrss" id="boton-twitter"></button>
+                  </a>
+                  <a href="http://www.instagram.es" target="_self">
+                      <button class="boton-rrss" id="boton-instagram"></button>
+                  </a>
+              </section>
+          </article>
+      </footer>
+      <script src="./script.js"></script>
     </body>
