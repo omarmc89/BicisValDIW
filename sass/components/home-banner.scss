@@ -1,0 +1,84 @@
+.home-banner{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  background-image: url("../images/main-background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+@keyframes efecto {
+  0% {
+    opacity: 0.8;
+    top: 10%;
+  }
+  100% {
+    opacity: 0;
+    letter-spacing: 10px;
+    font-size: 2rem;
+    top: 60vh;
+  }
+}
+
+@keyframes efecto2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity:0
+  }
+  80% {
+    opacity: 0.8;
+  }
+}
+
+#banner-text {
+position:absolute;
+width: 100vw;
+font-size:2.5rem;
+z-index:10;
+top:10%;
+left: 1rem;
+font-family: $font-permanent-marker;
+letter-spacing: 5px;
+overflow: hidden;
+animation: efecto linear auto both;
+animation-timeline: scroll();
+animation-range: 0 50vh;
+color:$dark-grey;
+}
+
+#banner-text-offer {
+position:absolute;
+text-align: center;
+font-size: 2rem;
+font-family: $font-poppins;
+z-index:10;
+bottom:0;
+color: $light-yellow-hover;
+font-family: $font-permanent-marker;
+letter-spacing: 5px;
+overflow: hidden;
+animation: efecto2 linear both;
+animation-timeline: scroll();
+}
+
+@media screen and (max-width: 800px) {
+  #banner-text {
+    position: relative;
+    animation: none;
+    top:0;
+    left:0;
+    height: 100%;
+    font-size:1.5rem;
+    text-align: center;
+  }
+  #banner-text-offer {
+    font-size: 1.5rem;
+    bottom: 0;
+    left: 1rem;
+  }
+}

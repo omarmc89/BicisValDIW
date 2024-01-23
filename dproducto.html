@@ -7,49 +7,29 @@
         <meta name author" content="Omar Martin">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BicisVal</title>
-        <link rel="stylesheet" type="text/css" href="./estilo.css"
-            media="screen" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/main.css"
+    media="screen" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit:ital,wght@0,200;0,300;0,500;0,700;1,300&family=Long+Cang&family=Permanent+Marker&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     </head>
     <div>
-        <header>
-            <div id="banner">
-                <img id="logo" src="./images/logo.png" />
-            </div>
-            <div id="contenedor-botones-banner">
-                <section id="cont-idioma" class="idioma">
-                    <div id="idiomas">
-                        <a href="index.html" target="_self"><button
-                                class="boton-idioma" id="botonVal"></button></a>
-                        <a href="index.html" target="_self"><button
-                                class="boton-idioma" id="botonCas"></button></a>
-                    </div>
-                </section>
-                <section id="boton-inicio">
-                    <a href="index.html" target="_self"><span
-                            class="material-icons">house</span></a>
-                </section>
-            </div>
-        </header>
-
-        <div id="contenedor">
-            <nav id="menu">
-                <section id="operaciones">
-                    <a href="alquiler.html" target="_self">
-                        <button class="boton-menu">Alquiler</button>
-                    </a>
-                    <a href="taller.html" target="_self">
-                        <button class="boton-menu">Taller</button>
-                    </a>
-                    <a href="venta.html" target="_self">
-                        <button class="boton-menu">Venta</button>
-                    </a>
-                </section>
-            </nav>
-        </div>
-
+      <header>
+        <h2 class="logo" >BicisVal</h2>
+        <nav class="navigation">
+          <a href="./index.html">Home</a>
+          <a href="./alquiler.html">Alquiler</a>
+          <a href="./taller.html">Taller</a>
+          <a href="./venta.html">Venta</a>
+          <div class="language">
+            <a href="#">Esp</a>
+            <a href="#">Val</a>
+          </div>
+        </nav>
+      </header>
         <section class="detalles">
+          <h2 class="title-caracteristicas">Características</h2>
             <img id="imagen" class="imagen-bici" src="./images/bici1.jpeg" />
             <ul class="lista">
                 <li class="caracteristica">
@@ -71,35 +51,36 @@
         </section>
 
         <footer>
-            <article id="contenedor-footer">
-                <section id="botones-footer">
-                    <p>Contacto (Email):</p>
-                    <a href="mailto:bicisval@bicisval.es">
-                        <span class="material-icons">mail</span>
-                    </a>
-                </section>
-                <section id="texto-footer">
-                    <span><strong>BicisVal</strong></span>
-                    <span>c/Noah, 24 Ontinyent - 46870</span>
-                    <span> Tel.: 96 290 66 77</span>
-                    <span><a href>Ubicación</a></span>
-                    <div class="condiciones">
-                        <a href="#">Política de "Cookies"</a>
-                        <a href="#">Términios y condiciones</a>
-                        <a href="#">Privacidad</a>
-                    </div>
-                </section>
-                <section id="rrss">
-                    <a href="http://www.facebook.es" target="_self">
-                        <button class="boton-rrss" id="boton-facebook"></button>
-                    </a>
-                    <a href="http://www.twitter.com" target="_self">
-                        <button class="boton-rrss" id="boton-twitter"></button>
-                    </a>
-                    <a href="http://www.instagram.es" target="_self">
-                        <button class="boton-rrss" id="boton-instagram"></button>
-                    </a>
-                </section>
-            </article>
-        </footer>
+          <section class="botones-footer">
+            <span>info@bicisval.com</span>
+            <a href="mailto:bicisval@bicisval.es">
+              <span id="mail" class="material-icons">mail</span>
+            </a>
+          </section>
+          <section class="texto-footer">
+              <span><strong>BicisVal</strong></span>
+              <span>c/Noah, 24 Ontinyent - 46870</span>
+              <span> Tel.: 96 290 66 77</span>
+              <span><a href="#" style="color:black; text-decoration: underline">
+                Ubicación
+                </a>
+              </span>
+              <div class="condiciones">
+                  <a href="#">Política de "Cookies"</a>
+                  <a href="#">Términios y condiciones</a>
+                  <a href="#">Privacidad</a>
+              </div>
+          </section>
+          <section class="rrss">
+              <a href="http://www.facebook.es" target="_self">
+                  <button class="boton-rrss facebook"></button>
+              </a>
+              <a href="http://www.twitter.com" target="_self">
+                  <button class="boton-rrss twitter"></button>
+              </a>
+              <a href="http://www.instagram.es" target="_self">
+                  <button class="boton-rrss instagram"></button>
+              </a>
+          </section>
+  </footer>
     </body>

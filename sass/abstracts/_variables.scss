@@ -1,0 +1,23 @@
+
+$dark-green: hsla(193, 96%, 20%, 1);
+$dark-grey: #011e2aee;
+$light-yellow-hover: #fbefd9;
+
+$font-bree: 'Bree Serif', sans-serif;
+$font-kanit: 'Kanit', sans-serif;
+$font-permanent-marker: 'Permanent Marker', cursive;
+$font-poppins: 'Poppins', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+$box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+
+@mixin colors-hover {
+  color: $dark-grey;
+  background-color: $light-yellow-hover;
+}
+
+@mixin colors-card {
+  background-color: $dark-green;
+  color: $light-yellow-hover;
+  font-family: $font-montserrat;
+}

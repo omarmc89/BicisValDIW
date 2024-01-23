@@ -1,0 +1,41 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.modelos-alquiler{
+  @extend %flex-center;
+  padding-top: 30px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+
+  >p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: $dark-grey;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+  
+.modelos {
+  @extend %flex-center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+
+  .modelo-imagen {
+    width: auto;
+    height: 230px;
+    border-radius: 10px;
+  }
+
+  .casilla-modelo {
+    @extend %flex-center;
+    flex-direction: column;
+    justify-content:space-around;
+  }
+}

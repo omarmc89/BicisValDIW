@@ -1,0 +1,98 @@
+.contenido-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+
+  .input-title {
+    font-size: 17px;
+  }
+
+  .main-form {
+    margin: 20px 0;
+    width: 40%;
+    height:80%;
+    gap: 10px;
+    text-align: center;
+    background-color: transparent;
+
+    .campo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    
+      span {
+        padding-bottom: 5px;
+        color: $dark-grey;
+        }
+    
+      input {
+        width: 70%;
+        align-items: center;
+        background-color: transparent;
+        border:none;
+        outline: 3px solid $dark-grey;
+        border-radius: 10px;
+        padding: 5px;
+        color: $dark-grey;
+        }
+    
+        select {
+          width: 70%;
+          align-items: center;
+          background-color: transparent;
+          border:none;
+          outline: 3px solid $dark-grey;
+          border-radius: 10px;
+          padding: 5px;
+          color: $dark-grey
+          }
+    
+        .material-icons {
+          font-size: 35px;
+          }
+    }
+    
+    .campo input::placeholder{
+      color: $dark-grey;
+    }
+      
+    .campo input:focus {
+      outline: 3px solid $dark-green;
+      color:$dark-grey;
+      font-size: 15px;
+    }
+    .campo input:focus::placeholder{
+      color:$dark-grey;
+      font-size: 15px;
+    }
+      
+    .btn-campo {
+      padding: 5px 10px;
+    
+      input {
+        width: 40%;
+        margin: 20px 0 0 0;
+        padding: 20px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: $dark-green;
+        color: $light-yellow-hover;
+        border-radius: 40px;
+        border:none;
+        box-shadow: $box-shadow;
+        transition: all 0.2s ease-in-out;
+        }
+    }
+    
+    .btn-campo input:hover {
+      @include colors-hover;
+      box-shadow: $box-shadow;
+    }
+  }
+}

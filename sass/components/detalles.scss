@@ -1,0 +1,27 @@
+.title-caracteristicas {
+  margin-top:30px;
+}
+
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .imagen-bici {
+    width: 1000px;
+    height: auto;
+  }
+
+  ul {
+    font-size: 30px;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      background: url("../images/pinon.png") no-repeat 0px;
+      background-size: 2rem;
+      padding: 20px;
+      padding-left: 60px;
+    }
+  }
+}
