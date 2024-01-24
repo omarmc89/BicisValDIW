@@ -32,7 +32,10 @@ header {
   font-size: 3rem;
   pointer-events: none;
   color: #011e2aee;
-  font-weight: 700; }
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 0; }
 
 nav {
   font-family: "Poppins", sans-serif;
@@ -121,6 +124,24 @@ footer {
 
 .instagram {
   background-image: url("../images/instagram-logo.png"); }
+
+@media screen and (max-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    font-size: 0.7rem; }
+  .rrss {
+    grid-row-start: 1; }
+  .texto-footer {
+    font-size: 0.7rem;
+    grid-row: 2/3;
+    grid-column: 1/3; }
+  .condiciones {
+    font-size: 0.6rem; } }
 
 .home-banner {
   width: 100%;
@@ -395,6 +416,9 @@ footer {
   .precios .texto-precios {
     font-size: 17px; }
 
+a {
+  text-decoration: none !important; }
+
 .title-venta {
   text-align: center;
   margin-top: 30px;
@@ -402,54 +426,59 @@ footer {
 
 .contenedor-productos {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   row-gap: 3rem;
-  grid-auto-rows: auto-fill;
-  grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+  grid-auto-rows: 400px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-auto-flow: dense;
   align-items: center;
   align-content: center;
   justify-content: space-around;
   justify-items: center;
   margin: 0 10px; }
-  .contenedor-productos .items {
+  .contenedor-productos img {
+    height: 400px;
     width: 100%;
-    border: none;
-    cursor: pointer; }
+    object-fit: cover;
+    border-radius: 20px; }
 
 .descripcion-prod {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  transition: all 0.3s ease-in-out; }
-  .descripcion-prod img {
-    width: 100%;
-    max-width: 400px;
-    object-fit: cover;
-    border-radius: 10px; }
-  .descripcion-prod .productos-venta {
-    border-radius: 10px;
-    width: 29rem;
-    object-fit: fill;
-    transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  max-width: 400px; }
   .descripcion-prod .info-productos {
+    color: #011e2aee !important;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
     font-size: 17px;
-    font-weight: 600;
-    margin-left: 100px;
-    margin-right: 100px;
+    font-weight: 600 !important;
     align-items: center;
     border-radius: 10px;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    width: 50%; }
+    transition: all 0.3s ease-in-out; }
     .descripcion-prod .info-productos span {
       font-weight: normal; }
 
 .descripcion-prod:hover {
   transform: scale(1.05); }
+
+@media screen and (max-width: 768px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 0 30px; }
+    .contenedor-productos img {
+      height: 300px;
+      object-fit: cover; }
+  .info-productos {
+    width: 100%; } }
 
 .title-caracteristicas {
   margin-top: 30px; }

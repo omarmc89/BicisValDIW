@@ -14,6 +14,9 @@ header {
   pointer-events:none;
   color: $dark-grey;
   font-weight: 700;
+  display:flex;
+  align-items: center;
+  margin: 0;
 }
 
 nav {

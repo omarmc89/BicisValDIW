@@ -93,4 +93,29 @@ footer {
 .instagram {
   background-image: url("../images/instagram-logo.png");
 }
+@media screen and (max-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    font-size: 0.7rem;
+  }
 
+  .rrss {
+    grid-row-start: 1;
+  }
+
+  .texto-footer {
+    font-size: 0.7rem;
+    grid-row:2/3;
+    grid-column: 1/3;
+  }
+
+  .condiciones {
+    font-size: 0.6rem;
+  }
+
+}
