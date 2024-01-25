@@ -2,12 +2,6 @@ a {
   text-decoration: none!important;
 }
 
-.title-venta{
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .contenedor-productos {
   display: grid;
   gap: 2rem;
@@ -24,7 +18,7 @@ a {
   img {
     height: 400px;
     width: 100%;
-    object-fit: cover;
+    object-fit:scale-down;
     border-radius: 20px;
   }
 }
@@ -39,9 +33,11 @@ a {
 
   .info-productos {
     color: $dark-grey!important;
-    font-family: $font-montserrat;
+    font-family: $font-kanit;
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    white-space: nowrap;
     font-weight: 600!important;
     align-items: center;
     border-radius: 10px;
@@ -57,7 +53,91 @@ a {
   transform: scale(1.05)
 }
 
+.animation-text {
+  @include section-title;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  overflow:hidden;
+  white-space:nowrap;
+  text-align: center;
+
+  p {
+    text-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  div:first-of-type {
+    animation: showup 7s infinite;
+  }
+
+  div:last-of-type {
+    width: 0px;
+    overflow:hidden;
+    animation: reveal 7s infinite;
+  }
+
+  div:last-of-type p{
+    margin-left: -500px;
+    animation: slidein 7s infinite;
+    text-align: start;
+    padding-left:8px;
+    font-family: $font-poppins;
+    font-style: italic;
+    font-weight: 100;
+  }
+}
+
+@keyframes showup {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes slidein {
+  0% { margin-left:-800px; filter:blur(10px);}
+  20% { margin-left:-800px; }
+  50% { margin-left:0px;}
+  60% { margin-left:0px;filter:blur(0px);}
+  100% {
+    margin-left:0px;
+  }
+}
+
+@keyframes reveal {
+  0% {opacity:0;width:0px;}
+  20% {opacity:1;width:0px;}
+  30% {width:400px;}
+  80% {opacity:1;}
+  100% {
+    opacity:0;
+    width:400px;}
+}
+
+
 @media screen and (max-width: 768px) {
+
+  .animation-text {
+    font-size: 20px!important;
+    flex-direction: column;
+    
+    div:last-of-type p{
+      text-align: center;
+
+    }
+  }
+
+  @keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:100%;}
+    80% {opacity:1;}
+    100% {
+      opacity:0;
+      width:100%;}
+  }
+
   .contenedor-productos {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
@@ -69,13 +149,17 @@ a {
 
     img {
       height: 300px;
-      object-fit: cover;
-
+      object-fit: contain;
     }
   }
 
-  .info-productos {
-    width: 100%;
+  .descripcion-prod {
+    max-width: 350px;
+
+    .info-productos {
+      font-size: 15px;
+      letter-spacing: 3px;
+    }
+
   }
 }
-  
