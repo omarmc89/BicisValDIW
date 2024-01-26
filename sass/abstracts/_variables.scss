@@ -2,8 +2,9 @@
 $dark-green: hsla(193, 96%, 20%, 1);
 $dark-grey: #011e2aee;
 $light-yellow-hover: #fbefd9;
-$animation-color1:hsl(180, 69%, 40%);
-$animation-color2:hsl(270, 73%, 53%);
+$bkg-color1:#7FB069;
+$bkg-color2:#C9B1BD;
+$bkg-color3: #E6AA68;
 
 $font-bree: 'Bree Serif', sans-serif;
 $font-kanit: 'Kanit', sans-serif;
@@ -27,10 +28,4 @@ $box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   font-weight: 700;
   margin: 50px 0;
   text-align: center;
-}
-
-@mixin colors-card {
-  background-color: $dark-green;
-  color: $light-yellow-hover;
-  font-family: $font-montserrat;
 }
