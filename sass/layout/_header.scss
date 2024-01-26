@@ -51,7 +51,8 @@ nav {
 @media screen and (max-width: 800px) {
   header {
     flex-direction: column;
-    height: 10vh;
+    height: 15vh;
+    justify-content: center;
     
     .logo-container {
       align-items: center;

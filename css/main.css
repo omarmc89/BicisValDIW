@@ -61,7 +61,8 @@ nav {
 @media screen and (max-width: 800px) {
   header {
     flex-direction: column;
-    height: 10vh; }
+    height: 15vh;
+    justify-content: center; }
     header .logo-container {
       align-items: center;
       justify-content: center; }
@@ -170,6 +171,8 @@ footer {
     font-size: 0.6rem; } }
 
 .home-banner {
+  view-timeline-name: --banner;
+  view-timeline-axis: block;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -210,7 +213,7 @@ footer {
   overflow: hidden;
   animation: efecto linear auto both;
   animation-timeline: scroll();
-  animation-range: 0 50vh;
+  animation-range: 0% 50%;
   color: #011e2aee; }
 
 #banner-text-offer {
@@ -226,9 +229,10 @@ footer {
   letter-spacing: 5px;
   overflow: hidden;
   animation: efecto2 linear both;
-  animation-timeline: scroll(); }
+  animation-timeline: scroll();
+  animation-range: 0% 30%; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .home-banner {
     height: 90vh; }
   #banner-text {
@@ -242,7 +246,8 @@ footer {
   #banner-text-offer {
     font-size: 1.5rem;
     bottom: 0;
-    left: 1rem; } }
+    left: 1rem;
+    animation: none; } }
 
 .home-description {
   margin: 3rem auto;
